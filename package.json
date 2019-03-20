@@ -14,7 +14,7 @@
     "preversion": "npm test",
     "postversion": "npm publish",
     "postpublish": "git push origin --all; git push origin --tags",
-    "test": "node test.js | tap -"
+    "test": "cross-env ELECTRON_RUN_AS_NODE=true electron test.js | tap -"
   },
   "keywords": [
     "fs",
@@ -34,10 +34,12 @@
   ],
   "license": "ISC",
   "devDependencies": {
+    "cross-env": "^5.2.0",
+    "electron": "^4.1.0",
     "import-fresh": "^2.0.0",
     "mkdirp": "^0.5.0",
     "rimraf": "^2.2.8",
-    "tap": "^12.0.1"
+    "tap": "^12.6.0"
   },
   "files": [
     "fs.js",

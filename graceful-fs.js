@@ -1,4 +1,4 @@
-var fs = require('fs')
+var fs = require('original-fs')
 var polyfills = require('./polyfills.js')
 var legacy = require('./legacy-streams.js')
 var clone = require('./clone.js')
